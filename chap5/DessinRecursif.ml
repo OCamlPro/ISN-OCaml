@@ -1,18 +1,6 @@
 (* Ces programmes sont sous licence CeCILL-B V1. *)
 
-module Isn = struct
-
-  let initDrawing titre x y largeur hauteur =
-    Graphics.open_graph "";
-    Graphics.set_window_title titre;
-    Graphics.resize_window largeur hauteur;
-    Graphics.moveto x y
-
-  let drawCircle x y r red green blue =
-    Graphics.set_color (Graphics.rgb red green blue);
-    Graphics.draw_circle x y r
-
-end
+open Isn
 
 (* Définition des directions *)
 let gauche = 0
@@ -38,7 +26,7 @@ let rec dessiner x y rayon v =
 let _ =
   Isn.initDrawing "DessinRécursif" 10 10 400 400;
   dessiner 200 200 64 aucun;
-  Graphics.wait_next_event [Graphics.Key_pressed]
+  Isn.waitKey ()
 
 
 
