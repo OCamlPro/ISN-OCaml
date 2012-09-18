@@ -1,0 +1,7 @@
+h1 {Font-Size: 24pt; Color: Red; Text-Align: Center;}
+
+a {Color: Green; Text-Decoration: Overline;}
+
+b {Font-Style: Italic; Font-Weight: Normal;}
+
+oeuvre {Text-Decoration: Underline;}
